@@ -1,0 +1,60 @@
+
+<html>
+<head>
+	<title>404: File not found</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<style>
+		.banner {
+			margin-top: 100px;
+		}
+	</style>
+	<div class="banner">
+		<h1>404: That file doesn't exist</h1>
+		<h4>You messed up, but that's okay!</h4>
+		<h4 id="mess">Check the URL or update your bookmark</h4>
+	</div>
+
+	<script>
+		var refer = document.referrer;
+		//alert(refer);
+		if (refer !== "") {
+			var msg = document.getElementById("mess");
+			msg.innerHTML = "<a href='" + refer + "'>Previous page</a>";
+		}
+	</script>
+	<script type="text/javascript">
+	var setColour = function(r, g, b) {
+		document.body.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b +')';
+	}
+		window.onload = function() {
+			console.log("in onload");
+			var red = 150;
+			var green = 150;
+			blue = 256;
+			direction = 'up';
+			var changeStuff = function(){
+				//console.log("started new frame");
+				if (direction === 'up'){
+					blue += 30;
+				} else {
+					blue -= 30;
+				}
+				if(blue > 255) {
+					direction = 'down';
+				} else if( blue < 30) {
+					direction = 'up';
+				}
+				setColour(red, green, blue);
+				window.setTimeout(changeStuff, 100);
+			}
+			window.setTimeout(changeStuff, 100);
+
+		}
+	</script>
+</body>
+</html>
+
+</body>
+</html>
