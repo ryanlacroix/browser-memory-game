@@ -1,5 +1,7 @@
 Browser Memory Game
 ===================
+*COMP2406 Assignment*
+
 Node-based browser memory game. Flip cards over and try to find matches!
 Each time a round is completed, the server generates a larger board. The fun just never ends.
 
